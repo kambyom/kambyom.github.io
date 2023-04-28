@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+	<title>Kambyom resilience map</title>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="css/leaflet.css">
+	<script src="js/leaflet.js"></script>
+
+	<style type="text/css">
+    body {
+        padding: 0;
+        margin: 0;
+    }
+    html, body, #map {
+        height: 100%;
+        width: 100%;
+    }
+	</style>
+
+</head>
+
+<body>
+	<div id="map" class="leaflet-container leaflet-fade-anim leaflet-grab leaflet-touch-drag" tabindex="0">
+	</div>
+	<script>
+		var mymap = L.map('map', {
+			center: [10, 0],
+			zoom: 2.8,
+			zoomSnap: 0.2,
+		});
+
+		L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/toner/{z}/{x}/{y}.{ext}', {
+			attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://www.openstreetmap.org/copyright">ODbL</a>.',
+			minZoom: 2,
+			maxZoom: 9,
+			ext: 'png'
+		}).addTo(mymap);
+	</script>
+
+
+
+
+
+</body>
+
+</html>
